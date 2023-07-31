@@ -1,0 +1,16 @@
+{
+  "name": "next-wss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd wss && pnpm dev\" \"cd web && pnpm dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@8.6.5",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
