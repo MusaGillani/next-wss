@@ -1,4 +1,5 @@
 import ColorPicker from "@/components/colorPicker";
+import DoodleWidth from "@/components/doodleWidth";
 import { Button } from "@/components/ui/button";
 
 export default function CanvasPage() {
@@ -10,7 +11,7 @@ export default function CanvasPage() {
         <aside className="mx-2 rounded-xl border border-neutral-500 p-5 h-[calc(100vh-10rem)] w-[25rem] flex flex-col justify-between">
           <div>
             <ColorPicker />
-            <p>Stroke width</p>
+            <DoodleWidth />
           </div>
           <div>
             <Button
