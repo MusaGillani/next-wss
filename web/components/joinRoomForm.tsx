@@ -16,6 +16,7 @@ import useForm from "@/hooks/useForm";
 import { SubmitHandler } from "react-hook-form";
 import { Icons } from "./icons";
 import CopyButton from "./copyButton";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string(),
@@ -23,9 +24,12 @@ const formSchema = z.object({
 });
 
 const JoinRoomForm: React.FC<{ id: string }> = ({ id }) => {
+  const router = useRouter();
   const form = useForm(formSchema, {});
-  const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = (data) =>
+  const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = (data) => {
     console.log(data);
+    router.push(`/${id}`);
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">

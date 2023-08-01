@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 
+import NavBar from "@/components/navbar";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 
@@ -22,11 +23,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "h-full min-h-screen bg-white dark:bg-black dark:text-white ",
+          "h-full min-h-screen bg-white dark:bg-black dark:text-white p-5",
           inter.className
         )}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <NavBar className="w-4/5 mx-auto" />
+          <div className="h-20" />
+          {children}
+        </Providers>
         <Toaster />
       </body>
     </html>
