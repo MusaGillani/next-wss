@@ -23,13 +23,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "h-full min-h-screen bg-white dark:bg-black dark:text-white p-5",
+          "h-full min-h-screen w-screen bg-white dark:bg-black dark:text-white p-5",
           inter.className
         )}
       >
         <Providers>
           <NavBar className="w-4/5 mx-auto" />
-          <div className="h-20" />
           {children}
         </Providers>
         <Toaster />

@@ -7,10 +7,7 @@ import { Label } from "@radix-ui/react-label";
 const NavBar: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <nav
-      className={cn(
-        "flex w-full items-center justify-between opacity-75",
-        className
-      )}
+      className={cn("flex w-full items-center justify-between h-24", className)}
     >
       <Label className={`text-4xl ${gloriaHallelujah.className}`}>DOODLE</Label>
       <div className="flex items-center gap-x-3">
