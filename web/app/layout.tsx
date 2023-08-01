@@ -28,7 +28,7 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          <NavBar className="w-4/5 mx-auto" />
+          <NavBar className="w-3/5 sm:w-4/5 mx-auto" />
           {children}
         </Providers>
         <Toaster />
